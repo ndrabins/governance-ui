@@ -197,6 +197,11 @@ export default function useGovernanceAssets() {
       isVisible: canUseAuthorityInstruction,
     },
     {
+      id: Instructions.CreateGatewayPluginRegistrar,
+      name: 'Civic: Create Gateway plugin registrar',
+      isVisible: canUseAuthorityInstruction,
+    },
+    {
       id: Instructions.RealmConfig,
       name: 'Realm config',
       isVisible: canUseAuthorityInstruction,
@@ -267,6 +272,11 @@ export default function useGovernanceAssets() {
       isVisible: canUseProgramUpgradeInstruction && symbol === 'MNGO',
     },
     {
+      id: Instructions.MangoChangeQuoteParams,
+      name: 'Mango: Change Quote Params',
+      isVisible: canUseProgramUpgradeInstruction && symbol === 'MNGO',
+    },
+    {
       id: Instructions.MangoChangeReferralFeeParams,
       name: 'Mango: Change Referral Fee Params',
       isVisible: canUseProgramUpgradeInstruction && symbol === 'MNGO',
@@ -292,29 +302,9 @@ export default function useGovernanceAssets() {
       isVisible: canUseProgramUpgradeInstruction && symbol === 'MNGO',
     },
     {
-      id: Instructions.Mint,
-      name: 'Mint Tokens',
-      isVisible: canUseMintInstruction,
-    },
-    {
-      id: Instructions.CreateAssociatedTokenAccount,
-      name: 'Create Associated Token Account',
-      isVisible: canUseAnyInstruction,
-    },
-    {
-      id: Instructions.Base64,
-      name: 'Execute Custom Instruction',
-      isVisible: canUseAnyInstruction,
-    },
-    {
-      id: Instructions.VotingMintConfig,
-      name: 'Vote Escrowed Tokens: Configure Voting Mint',
-      isVisible: canUseAuthorityInstruction,
-    },
-    {
-      id: Instructions.CreateVsrRegistrar,
-      name: 'Vote Escrowed Tokens: Create Registrar',
-      isVisible: canUseAuthorityInstruction,
+      id: Instructions.MangoSetMarketMode,
+      name: 'Mango: Set Market Mode',
+      isVisible: canUseProgramUpgradeInstruction && symbol === 'MNGO',
     },
     {
       id: Instructions.DepositIntoVolt,
@@ -344,6 +334,16 @@ export default function useGovernanceAssets() {
     {
       id: Instructions.WithrawFromCastle,
       name: 'Castle: Withdraw from Vault',
+      isVisible: canUseAnyInstruction,
+    },
+    {
+      id: Instructions.SwitchboardAdmitOracle,
+      name: 'Switchboard: Admit Oracle to Queue',
+      isVisible: canUseAnyInstruction,
+    },
+    {
+      id: Instructions.SwitchboardRevokeOracle,
+      name: 'Switchboard: Remove Oracle from Queue',
       isVisible: canUseAnyInstruction,
     },
     {
