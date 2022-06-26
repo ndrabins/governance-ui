@@ -459,7 +459,6 @@ export function useVotingPlugins() {
     if (usedCollectionsPks.length && realm) {
       if (connected && currentClient.walletPk?.toBase58()) {
         handleGetNfts()
-        handleRegisterGatekeeperNetwork()
       }
       handleMaxVoterWeight()
     } else if (realm) {
